@@ -2,19 +2,10 @@ import * as styles from "./index.css"
 
 import Header from "./components/Header"
 import Footer from "./components/Footer"
-import Person from "./components/Person"
+import employeeData from "./assets/employeeData.json"
+import PersonList from "./components/PersonList"
 
 const App = () => {
-
-  const samplePerson = {
-    name: "John Smith",
-    title: "Senior Software Engineer",
-    salary: 7000,
-    phone: "0451234567",
-    email: "john.smith@company.com",
-    animal: "Golden Retriever",
-  }
-
 
   return (
     <>
@@ -22,7 +13,7 @@ const App = () => {
       <hr />
       <main>
         <h2 className={styles.h1}></h2>
-        <Person {...samplePerson} />
+        <PersonList employees={employeeData} />
       </main>
       <hr />
       <Footer />
