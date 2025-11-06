@@ -45,6 +45,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+  padding: 1rem;
 }
 ol, ul {
 	list-style: none;
@@ -69,14 +70,16 @@ html {
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    sans-serif;
   font-size: 1.6rem;
+  margin: 2rem;
+  background-color: khaki;
 }
 
+h1, h2, p, section {
+  margin-block-end: 1rem;
+}
 h1 {
   font-size: 2.4rem;
   line-height: 1.1;
@@ -115,6 +118,61 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+/* PersonList komponentti */
+.employee {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.employee > * {
+  flex-basis: 0;
+  flex-grow: 1;
+  background-color: darkkhaki;
+  padding: 3rem;
+  line-height: 1.5;
+  min-width:25rem;
+  max-width: 27rem;
+}
+/* END PersonList komponentti */
+
+/* PerCard komponentti */
+.card {
+}
+
+/* AddEmployee komponentti */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 65rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 600px;
+}
+
+.form label {
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+}
+/* END AddEmployee komponentti */
+
 
 @media (prefers-color-scheme: light) {
   :root {

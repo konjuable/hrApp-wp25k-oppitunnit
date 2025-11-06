@@ -1,40 +1,69 @@
-import styles from "./PersonCard.module.css"
+import styles from "./PersonCard.module.css";
+import { useState } from "react"
 
-import Skill from "./Skill"
+// import Skill from "./Skill"
 
-const PersonCard = ({ name, title, salary, phone, email, animal, startDate, location, department, skills }) => {
-    let startingTime = startDate
+const PersonCard = (props) => {
 
-// https://stackoverflow.com/questions/4060004/calculate-age-given-the-birth-date-in-the-format-yyyymmdd
-    const getAge = (startingTime) => 
-        Math.floor((new Date() - new Date(startingTime).getTime()) / 3.15576e+10)
+  // const [skillList, setSkillList] = useState(skills)
 
+  // tallennetaan array skills skillList muuttujaan, käytään skillList array läpi ja lisätään jokaisen skillin väliin pilkku ja tallennetaan tämä muuttujaan commaList
+  // console.log(skillList,  skillList.length)
+  // let commaList = skillList.join(", ")
+  // console.log("commaList " + commaList)
 
-    return (
+  let startingTime = props.startDate;
+
+  // https://stackoverflow.com/questions/4060004/calculate-age-given-the-birth-date-in-the-format-yyyymmdd
+  const getAge = (startingTime) =>
+    Math.floor((new Date() - new Date(startingTime).getTime()) / 3.15576e10);
+
+  let serviceYears = getAge(startingTime);
+  console.log(serviceYears);
+
+  const Recognition = (props) => {
+    if (props % 5 === 0 && props != 0) {
+      return (
         <>
-            <dl className={styles.card}>
-                <dt>
-                    <h3>{name}</h3>
-                </dt>
-                <dd className={styles.cardContent}>
-                    <p>Name: {name}</p>
-                    <p>Title: {title}</p>
-                    <p>Salary: {salary?.toLocaleString()} €</p>
-                    <p>Email: {email}</p>
-                    <p>Phone: {phone}</p>
-                    <p>Pet: {animal}</p>
-                    <p>StartDate: {startDate}</p>
-
-                    <p>Service Years: {getAge(startingTime)} years</p>
-
-                    <p>Location: {location}</p>
-                    <p>Department: {department}</p>
-                    {/* <p>Skills: {skills}</p> */}
-                    <Skill skills={skills}/>
-                </dd>
-            </dl>
+          <dd>Recognition: 🎉 Schedule recognition meeting.</dd>
         </>
-    )
-}
+      );
+    }
+  };
 
-export default PersonCard
+  const Probation = (props) => {
+    if (props < 0.5) {
+      return (
+        <>
+          <dd>Probation: 🔔 Schedule probation review.</dd>
+        </>
+      );
+    }
+  };
+
+  return (
+    <>
+      <dl className="card">
+        <dt>
+          <h3>Name {props.name}</h3>
+        </dt>
+        {Recognition(serviceYears)}
+        {Probation(serviceYears)}
+        <dd>Title: {props.title}</dd>
+        <dd>Salary: {props.salary?.toLocaleString()} €</dd>
+        <dd>Email: {props.email}</dd>
+        <dd>Phone: {props.phone}</dd>
+        <dd>Pet: {props.animal}</dd>
+        <dd>StartDate: {props.startDate}</dd>
+        <dd>Service Years: {getAge(startingTime)} years</dd>
+        <dd>Location: {props.location}</dd>
+        <dd>Department: {props.department}</dd>
+        <dd>Skills: {props.skills.join(", ")}</dd>
+        {/* <dd>Skills: {commaList}</dd> */}
+        {/* <Skill skills={skills}/> */}
+      </dl>
+    </>
+  );
+};
+
+export default PersonCard;
