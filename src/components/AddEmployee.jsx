@@ -1,4 +1,6 @@
-const AddEmployee = ({ formData, setFormData, handleClick }) => {
+import axios from "axios"
+
+const AddEmployee = ({ formData, setFormData, handleClick, setEmployees, employees }) => {
 
     const handleChange = (e) => {
         setFormData((prevState) => {
@@ -8,6 +10,13 @@ const AddEmployee = ({ formData, setFormData, handleClick }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+
+        axios
+         .post("http://localhost:3001/employees", formData)
+         .then(response => {
+            setEmployees(employees.concat(response.data))
+         })
+
         handleClick();
         setFormData({
              name: "",

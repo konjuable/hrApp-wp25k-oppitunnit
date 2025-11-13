@@ -10,7 +10,7 @@ import PersonList from "./PersonList"
 import About from "./About"
 
 const Header = (
-    { formData, setFormData, handleClick, employees, setEmployee }) => {
+    { formData, setFormData, handleClick, employees, setEmployees }) => {
     return (
         <>
             <header>
@@ -29,7 +29,7 @@ const Header = (
                                     formData={formData}
                                     setFormData={setFormData}
                                     handleClick={handleClick}
-                                    setEmployee={setEmployee}
+                                    setEmployees={setEmployees}
                                     employees={employees}
                                 />
                             }

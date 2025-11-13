@@ -1,5 +1,5 @@
-import styles from "./PersonCard.module.css";
-import { useState } from "react"
+// import styles from "./PersonCard.module.css";
+// import { useState } from "react"
 
 // import Skill from "./Skill"
 
@@ -20,6 +20,8 @@ const PersonCard = (props) => {
 
   let serviceYears = getAge(startingTime);
   console.log(serviceYears);
+
+
 
   const Recognition = (props) => {
     if (props % 5 === 0 && props != 0) {
@@ -58,7 +60,8 @@ const PersonCard = (props) => {
         <dd>Service Years: {getAge(startingTime)} years</dd>
         <dd>Location: {props.location}</dd>
         <dd>Department: {props.department}</dd>
-        <dd>Skills: {props.skills.join(", ")}</dd>
+        <dd>Skills: {props.skills}</dd>
+        {/* <dd>Skills: {props.skills.join(", ")}</dd> */}
         {/* <dd>Skills: {commaList}</dd> */}
         {/* <Skill skills={skills}/> */}
       </dl>
