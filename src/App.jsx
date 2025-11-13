@@ -4,8 +4,8 @@ import * as styles from "./index.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import employeeData from "./assets/employeeData.json";
-import PersonList from "./components/PersonList";
-import AddEmployee from "./components/AddEmployee";
+// import PersonList from "./components/PersonList";
+// import AddEmployee from "./components/AddEmployee";
 
 function App() {
   const [employees, setEmployees] = useState(employeeData)
@@ -44,8 +44,15 @@ function App() {
 
   return (
     <>
-      <Header />
-      <hr />
+      <Header 
+        formData={formData}
+        setFormData={setFormData}
+        handleClick={handleClick}
+        employees={employees}
+        setEmployees={setEmployees}
+      />
+      
+      {/* <hr />
       <main>
         <PersonList employees={employees} />
         <AddEmployee
@@ -54,7 +61,8 @@ function App() {
           handleClick={handleClick}
         />
       </main>
-      <hr />
+      <hr /> */}
+
       <Footer />
     </>
   );
