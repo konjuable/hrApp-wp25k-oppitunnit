@@ -21,7 +21,7 @@ function App() {
     startDate: "",
     location: "",
     department: "",
-    skills: "",
+    skills: [],
   });
 
   useEffect(() => {

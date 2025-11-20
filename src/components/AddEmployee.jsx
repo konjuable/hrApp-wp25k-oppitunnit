@@ -3,9 +3,14 @@ import axios from "axios"
 const AddEmployee = ({ formData, setFormData, handleClick, setEmployees, employees }) => {
 
     const handleChange = (e) => {
-        setFormData((prevState) => {
-            return { ...prevState, [e.target.name]: e.target.value }
-        })
+        const { name, value } = e.target
+        setFormData((prevState) => ({
+            ...prevState, 
+            [name]:
+            name === "skills"
+                ? value.split(", ").map((skill) => skill.trim())
+                : value,
+        }))
     }
 
     const handleSubmit = (e) => {
@@ -19,16 +24,16 @@ const AddEmployee = ({ formData, setFormData, handleClick, setEmployees, employe
 
         handleClick();
         setFormData({
-             name: "",
+            name: "",
             title: "",
-            salary: "",
             phone: "",
             email: "",
             animal: "",
             startDate: "",
+            salary: "",
             location: "",
             department: "",
-            skills: "",
+            skills: [],
         }) // optimal resetting of the form
     }
 
@@ -56,17 +61,6 @@ const AddEmployee = ({ formData, setFormData, handleClick, setEmployees, employe
                         type="text"
                         autoComplete="title"
                         value={formData.title}
-                        onChange={handleChange}
-                    />
-
-                    <label htmlFor="salary">Salary</label>
-                    <input 
-                        className="input"
-                        id="salary"
-                        name="salary"
-                        type="number"
-                        autoComplete="salary"
-                        value={formData.salary}
                         onChange={handleChange}
                     />
 
@@ -114,6 +108,17 @@ const AddEmployee = ({ formData, setFormData, handleClick, setEmployees, employe
                         onChange={handleChange}
                     />
 
+                    <label htmlFor="salary">Salary</label>
+                    <input 
+                        className="input"
+                        id="salary"
+                        name="salary"
+                        type="number"
+                        autoComplete="salary"
+                        value={formData.salary}
+                        onChange={handleChange}
+                    />
+
                     <label htmlFor="location">Location</label>
                     <input 
                         className="input"
@@ -141,7 +146,7 @@ const AddEmployee = ({ formData, setFormData, handleClick, setEmployees, employe
                         className="input"
                         id="skills"
                         name="skills"
-                        type="text"
+                        type="array"
                         autoComplete="skills"
                         value={formData.skills}
                         onChange={handleChange}

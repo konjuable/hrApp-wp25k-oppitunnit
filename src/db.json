@@ -1,7 +1,7 @@
 {
   "employees": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Aino Lahti",
       "title": "Frontend Developer",
       "salary": 54000,
@@ -9,7 +9,7 @@
       "email": "aino.lahti@example.com",
       "animal": "🦊 fox",
       "startDate": "2025-10-15",
-      "location": "Helsinki, Finland",
+      "location": "Kuopio, Finland",
       "department": "Engineering",
       "skills": [
         "React",
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Jonas Mäkelä",
       "title": "Backend Developer",
       "salary": 62000,
@@ -37,7 +37,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Sofia Virtanen",
       "title": "Product Manager",
       "salary": 70000,
@@ -55,7 +55,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Emil Korhonen",
       "title": "UX Designer",
       "salary": 51000,
@@ -73,7 +73,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Helmi Salonen",
       "title": "Data Scientist",
       "salary": 75000,
@@ -91,7 +91,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Mikko Niemi",
       "title": "DevOps Engineer",
       "salary": 68000,
@@ -109,7 +109,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Laura Koskinen",
       "title": "QA Engineer",
       "salary": 48000,
@@ -127,7 +127,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Timo Rantanen",
       "title": "Sales Manager",
       "salary": 65000,
@@ -145,7 +145,7 @@
       ]
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Kaisa Hämäläinen",
       "title": "HR Specialist",
       "salary": 47000,
@@ -163,7 +163,7 @@
       ]
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Roope Salmi",
       "title": "Full Stack Developer",
       "salary": 63000,
@@ -181,7 +181,7 @@
       ]
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Veera Lehtonen",
       "title": "Marketing Specialist",
       "salary": 46000,
@@ -199,7 +199,7 @@
       ]
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Antti Vainio",
       "title": "Customer Support Engineer",
       "salary": 44000,
@@ -214,6 +214,38 @@
         "SaaS Support",
         "Ticketing Systems",
         "Technical Documentation"
+      ]
+    },
+    {
+      "id": "8ebb",
+      "name": "John Travolta",
+      "title": "Dancer",
+      "salary": "15000",
+      "phone": "1234567",
+      "email": "travolta@grease.com",
+      "animal": "Hamster",
+      "startDate": "11-01-2025",
+      "location": "Hollywood, US",
+      "department": "Studio",
+      "skills": [
+        "Dancing",
+        "Swinging"
+      ]
+    },
+    {
+      "id": "6132",
+      "name": "Olivia Newton-John",
+      "title": "Actress",
+      "salary": "50000",
+      "phone": "7654321",
+      "email": "oli@via.tv",
+      "animal": "Raven",
+      "startDate": "11-11-2025",
+      "location": "Graveyard, London",
+      "department": "Upstairs",
+      "skills": [
+        "Singing", 
+        "Dancing"
       ]
     }
   ]

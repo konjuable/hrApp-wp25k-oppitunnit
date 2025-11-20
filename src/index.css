@@ -129,15 +129,25 @@ button:focus-visible {
   flex-basis: 0;
   flex-grow: 1;
   background-color: darkkhaki;
-  padding: 3rem;
+  padding: 1rem;
   line-height: 1.5;
-  min-width:25rem;
-  max-width: 27rem;
+  min-width:26rem;
+  max-width: 52.5rem;
 }
 /* END PersonList komponentti */
 
 /* PerCard komponentti */
 .card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card > * {
+  flex-grow: 2;
+  flex-basis: 100%;
+}
+.card button {
+  flex-grow: 1;
 }
 
 /* AddEmployee komponentti */
