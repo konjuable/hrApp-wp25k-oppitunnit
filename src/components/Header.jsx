@@ -1,7 +1,7 @@
 import styles from "./Header.module.css"
 
 import {
-    BrowserRouter as Router,
+    HashRouter as Router,
     Routes, Route, Link
 } from "react-router-dom"
 
