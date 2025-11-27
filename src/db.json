@@ -4,7 +4,7 @@
       "id": "1",
       "name": "Aino Lahti",
       "title": "Frontend Developer",
-      "salary": 54000,
+      "salary": "55000",
       "phone": "+358401234567",
       "email": "aino.lahti@example.com",
       "animal": "🦊 fox",
@@ -22,7 +22,7 @@
       "id": "2",
       "name": "Jonas Mäkelä",
       "title": "Backend Developer",
-      "salary": 62000,
+      "salary": "63000",
       "phone": "+358409876543",
       "email": "jonas.makela@example.com",
       "animal": "🦮 wolf",
@@ -244,7 +244,7 @@
       "location": "Graveyard, London",
       "department": "Upstairs",
       "skills": [
-        "Singing", 
+        "Singing",
         "Dancing"
       ]
     }

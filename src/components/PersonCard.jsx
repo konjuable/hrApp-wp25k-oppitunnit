@@ -2,6 +2,8 @@
 import { useState } from "react"
 import axios from "axios"
 
+import { _patch } from "../hooks/useAxios";
+
 const PersonCard = (props) => {
 
   // const [skillList, setSkillList] = useState(skills)
@@ -53,7 +55,7 @@ const PersonCard = (props) => {
   const [person, setPerson] = useState({ salary, location, department, skills })
 
   const update = (url = "http://localhost:3001", body = {}, headers = {}) =>
-    axios.patch(url, body, { headers })
+    _patch(url, body, { headers })
 
   const handleInputChange = (e) => {
     const { name, value } = e.target

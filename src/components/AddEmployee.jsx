@@ -1,4 +1,6 @@
-import axios from "axios"
+// import axios from "axios"
+
+import { _post } from "../hooks/useAxios"
 
 const AddEmployee = ({ formData, setFormData, handleClick, setEmployees, employees }) => {
 
@@ -16,11 +18,20 @@ const AddEmployee = ({ formData, setFormData, handleClick, setEmployees, employe
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        axios
-         .post("http://localhost:3001/employees", formData)
-         .then(response => {
-            setEmployees(employees.concat(response.data))
-         })
+        try {
+            _post("/employees", formData)
+            .then(response => {
+                setEmployees(employees.concat(response.data))
+            })
+        } catch(error) {
+            console.log("Error adding data: ", error)
+        }
+
+        // axios
+        //  .post("http://localhost:3001/employees", formData)
+        //  .then(response => {
+        //     setEmployees(employees.concat(response.data))
+        //  })
 
         handleClick();
         setFormData({
