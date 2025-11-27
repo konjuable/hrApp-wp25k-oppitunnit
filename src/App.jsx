@@ -32,7 +32,7 @@ function App() {
 
   const fetchData = async () => {
     try {
-      const response = await _get("/employees", { headers: {} })
+      const response = await _get("/api/employees", { headers: {} })
       setEmployees(response.data)
     } catch(error) {
       console.log("Error fetching data: ", error)

@@ -54,7 +54,7 @@ const PersonCard = (props) => {
   const [isEditing, setIsEditing] = useState(false)
   const [person, setPerson] = useState({ salary, location, department, skills })
 
-  const update = (url = "http://localhost:3001", body = {}, headers = {}) =>
+  const update = (url = "https://hrapp-wp25k-oppitunnit-mock-api.onrender.com/", body = {}, headers = {}) =>
     _patch(url, body, { headers })
 
   const handleInputChange = (e) => {
@@ -63,7 +63,7 @@ const PersonCard = (props) => {
   }
 
   const handleEdit = () => {
-    update (`http://localhost:3001/employees/${id}`, person)
+    update (`https://hrapp-wp25k-oppitunnit-mock-api.onrender.com/api/employees/${id}`, person)
   }
 
   const renderEditableField = (value, name) => {

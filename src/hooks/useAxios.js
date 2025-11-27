@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const BASE_URL = "http://localhost:3001"
+const BASE_URL = "https://hrapp-wp25k-oppitunnit-mock-api.onrender.com/"
 
 const useAxios = axios.create({
     baseURL: BASE_URL,
