@@ -19,7 +19,7 @@ const AddEmployee = ({ formData, setFormData, handleClick, setEmployees, employe
         e.preventDefault()
 
         try {
-            _post("/employees", formData)
+            _post("https://hrapp-wp25k-oppitunnit-mock-api.onrender.com/api/employees", formData)
             .then(response => {
                 setEmployees(employees.concat(response.data))
             })
