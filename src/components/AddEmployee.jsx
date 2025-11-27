@@ -19,7 +19,7 @@ const AddEmployee = ({ formData, setFormData, handleClick, setEmployees, employe
         e.preventDefault()
 
         try {
-            _post("/api/employees", formData)
+            _post("/employees", formData)
             .then(response => {
                 setEmployees(employees.concat(response.data))
             })
